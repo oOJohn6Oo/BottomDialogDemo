@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scroll_view_att_test"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/darker_gray"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <include
+                android:id="@+id/consume_window_insets"
+                layout="@layout/item_switch" />
+
+            <include
+                android:id="@+id/decor_intercept"
+                layout="@layout/item_switch" />
+
+            <include
+                android:id="@+id/enforce_status"
+                layout="@layout/item_switch" />
+
+            <include
+                android:id="@+id/enforce_navigation"
+                layout="@layout/item_switch" />
+
+            <include
+                android:id="@+id/floating"
+                layout="@layout/item_switch" />
+
+            <include
+                android:id="@+id/light_status"
+                layout="@layout/item_switch" />
+
+            <include
+                android:id="@+id/light_nav"
+                layout="@layout/item_switch" />
+
+            <include
+                android:id="@+id/dim_bgd"
+                layout="@layout/item_switch" />
+
+            <include
+                android:id="@+id/remove_bgd"
+                layout="@layout/item_switch" />
+
+            <include
+                android:id="@+id/hide_nav"
+                layout="@layout/item_switch" />
+
+            <include
+                android:id="@+id/respond_nav"
+                layout="@layout/item_switch" />
+
+            <include
+                android:id="@+id/status_color"
+                layout="@layout/item_color_choose" />
+
+            <include
+                android:id="@+id/nav_color"
+                layout="@layout/item_color_choose" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="Width:"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/width_group_dg_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginVertical="12dp"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/wrap_content_width_dg_test"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WRAP" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/match_parent_width_dg_test"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FILL" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:text="Height:"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/height_group_dg_test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginVertical="12dp"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/wrap_content_height_dg_test"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WRAP" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/match_parent_height_dg_test"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="FILL" />
+
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/bottom_view_att_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/colorBackground">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_confirm_dg_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="12dp"
+            android:text="@android:string/ok" />
+    </FrameLayout>
+</LinearLayout>

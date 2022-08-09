@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Dialog Test"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@id/floating_nav_dialog_demo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/floating_nav_dialog_demo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FloatingWithNavBarDialog"
+        app:layout_constraintBottom_toTopOf="@id/floating_dialog_demo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/test" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/floating_dialog_demo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FloatingDialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/floating_nav_dialog_demo" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/no_floating_dialog_demo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NoFloatingDialog"
+        app:layout_constraintBottom_toTopOf="@id/no_floating_bottom_sheet_dialog_demo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/floating_nav_dialog_demo" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/no_floating_bottom_sheet_dialog_demo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NoFloatingBottomSheetDialog"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/no_floating_dialog_demo" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
