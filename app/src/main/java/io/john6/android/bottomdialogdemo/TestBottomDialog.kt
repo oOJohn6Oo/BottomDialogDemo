@@ -30,6 +30,9 @@ class TestBottomDialog(context: Context, @StyleRes theme: Int = 0) : Dialog(cont
             it.setContentHeightText()
             it.setWindowAnimations(R.style.dialog_anim)
 
+            WindowCompat.setDecorFitsSystemWindows(it, false)
+            it.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS)
+
             // setOnApplyWindowInsetsListener
             val view = if (viewModel.interceptDecorViewInset.value == true) it.decorView
             else it.decorView.findViewById(R.id.content)
@@ -53,13 +56,11 @@ class TestBottomDialog(context: Context, @StyleRes theme: Int = 0) : Dialog(cont
                     Log.d("lq", "onCreate: <R")
                     it.decorView.systemUiVisibility = it.decorView.systemUiVisibility or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 }
-                    it.decorView.systemUiVisibility = it.decorView.systemUiVisibility or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
             }
             if (viewModel.removeBackground.value == true)
                 it.setBackgroundDrawable(null)
 
             it.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
-            it.setType(WindowManager.LayoutParams.TYPE_APPLICATION_PANEL)
 
             it.setGravity(Gravity.BOTTOM)
             it.setLayout(
